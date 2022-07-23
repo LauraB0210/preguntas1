@@ -1,3 +1,11 @@
-1. ¿Cómo ve los archivos cambiados dentro de cada confirmación del registro de git?
-2. ¿Cómo ve el contenido de lo que cambió dentro de cada archivo del registro de git?
-3. ¿A qué se refiere HEAD en el contexto de git? (No debe confundirse con el "HEAD<<<<" que se observa dentro del conflicto de fusión
+1. How do you see the files changed within each commit from git log? 
+The most basic and powerful tool to do this is the git log command. By default, if you don't pass any parameters, git log lists the commits made against that repository in reverse chronological order.
+
+
+
+2. How do you see the contents of what changed within each file from the git log?
+Using git log --follow -p bar will show the file's entire history, including any changes to the file when it was known as foo . The -p option ensures that diffs are included for each change. --stat is also helpful. You can use it together with -p.
+
+
+3. What does HEAD refer to in the context of git? (Not to be confused with the "HEAD<<<<" one observes within merge conflict)
+The HEAD in Git is the pointer to the current branch reference, which is in turn a pointer to the last commit you made or the last commit that was checked out into your working directory. That also means it will be the parent of the next commit you do.
